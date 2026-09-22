@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Explore university programs and find a study path that fits your future.">
+	<title>UniStudy Map | Find Your Study Path</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="#top" aria-label="UniStudy Map home">
+			<span class="brand-mark" aria-hidden="true">U</span>
+			<span>UniStudy <strong>Map</strong></span>
+		</a>
+
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="#universities">Universities</a>
+			<a href="#programs">Programs</a>
+			<a href="#path">Study Path</a>
+			<a href="#about">About</a>
+		</nav>
+
+		<a class="header-action" href="#path">Build my path <span aria-hidden="true">&#8594;</span></a>
+	</header>
+
+	<main id="top">
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="hero-copy">
+				<p class="eyebrow"><span></span> Your next chapter starts here</p>
+				<h1 id="hero-title">Find the path<br><em>that feels like you.</em></h1>
+				<p class="hero-description">Compare programs, discover the right direction, and turn your curiosity into a plan for what comes next.</p>
+
+				<form class="search-form" id="search-form" role="search">
+					<label class="sr-only" for="search-input">Search universities or programs</label>
+					<span class="search-icon" aria-hidden="true">&#9906;</span>
+					<input id="search-input" type="search" placeholder="Search universities or programs..." autocomplete="off">
+					<button type="submit">Explore <span aria-hidden="true">&#8594;</span></button>
+				</form>
+				<div class="filter-controls" aria-label="Filter search results">
+					<label for="field-filter">Study field</label>
+					<select id="field-filter">
+						<option value="">All fields</option>
+					</select>
+					<label for="location-filter">Location</label>
+					<select id="location-filter">
+						<option value="">All locations</option>
+					</select>
+				</div>
+				<p class="search-status" id="search-status" aria-live="polite"></p>
+				<div class="search-results" id="search-results" aria-live="polite" aria-label="University search results"></div>
+				<section class="details-panel" id="university-details" aria-labelledby="details-title" hidden>
+					<button class="back-button" id="back-to-results" type="button">&#8592; Back to results</button>
+					<p class="eyebrow"><span></span> University profile</p>
+					<h2 id="details-title"></h2>
+					<div class="details-grid">
+						<div><span>Location</span><strong id="details-location"></strong></div>
+						<div><span>Estimated tuition</span><strong id="details-tuition"></strong></div>
+						<div class="details-wide"><span>Programs</span><strong id="details-programs"></strong></div>
+						<div class="details-wide"><span>Admission requirements</span><strong id="details-admission"></strong></div>
+					</div>
+				</section>
+				<section class="comparison-panel" id="comparison-panel" aria-labelledby="comparison-title" hidden>
+					<p class="eyebrow"><span></span> Compare options</p>
+					<h2 id="comparison-title">Your university comparison</h2>
+					<div class="comparison-grid" id="comparison-grid"></div>
+				</section>
+			</div>
+
+			<div class="hero-art" aria-label="Illustration of a student planning their university journey">
+				<div class="orbit orbit-one"></div>
+				<div class="orbit orbit-two"></div>
+				<div class="map-card">
+					<span class="map-label">YOUR MAP</span>
+					<div class="route-line"></div>
+					<div class="route-dot dot-one"></div>
+					<div class="route-dot dot-two"></div>
+					<div class="route-dot dot-three"></div>
+					<span class="map-pin pin-one">&#9733;</span>
+					<span class="map-pin pin-two">&#10003;</span>
+					<span class="map-pin pin-three">&#9679;</span>
+				</div>
+				<div class="art-note note-one">Start with<br><strong>what sparks you.</strong></div>
+				<div class="art-note note-two">Make it<br><strong>your direction.</strong></div>
+			</div>
+		</section>
+
+		<section class="explore-section" id="programs" aria-labelledby="fields-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow"><span></span> Browse possibilities</p>
+					<h2 id="fields-title">Where will your<br><em>interests</em> take you?</h2>
+				</div>
+				<p class="section-note">Begin with a field that catches your eye.<br>There is more than one way forward.</p>
+			</div>
+
+			<div class="field-list" id="field-list">
+				<button class="field-card" data-field="Business" type="button"><span class="field-number">01</span><span class="field-icon">&#9670;</span><span>Business</span><span class="field-arrow">&#8599;</span></button>
+				<button class="field-card" data-field="Information Technology" type="button"><span class="field-number">02</span><span class="field-icon">&#9633;</span><span>Information<br>Technology</span><span class="field-arrow">&#8599;</span></button>
+				<button class="field-card" data-field="Engineering" type="button"><span class="field-number">03</span><span class="field-icon">&#9881;</span><span>Engineering</span><span class="field-arrow">&#8599;</span></button>
+				<button class="field-card" data-field="Medicine" type="button"><span class="field-number">04</span><span class="field-icon">&#10010;</span><span>Medicine</span><span class="field-arrow">&#8599;</span></button>
+				<button class="field-card" data-field="Marketing" type="button"><span class="field-number">05</span><span class="field-icon">&#9998;</span><span>Marketing</span><span class="field-arrow">&#8599;</span></button>
+				<button class="field-card" data-field="Design" type="button"><span class="field-number">06</span><span class="field-icon">&#10022;</span><span>Design</span><span class="field-arrow">&#8599;</span></button>
+			</div>
+		</section>
+
+		<section class="path-banner" id="path" aria-labelledby="path-title">
+			<p class="eyebrow light"><span></span> One step at a time</p>
+			<h2 id="path-title">A clearer future<br><em>starts with one question.</em></h2>
+			<a class="light-button" href="#search-form">Start exploring <span aria-hidden="true">&#8594;</span></a>
+		</section>
+	</main>
+
+	<footer id="about">
+		<p>&copy; 2026 UniStudy Map</p>
+		<p>Made for curious minds.</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
